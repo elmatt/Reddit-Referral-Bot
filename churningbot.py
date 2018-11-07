@@ -80,7 +80,7 @@ def credit_card_link(link):
 
 
 def run_explainbot(reddit):
-    for thread in reddit.get_subreddit('churningreferrals').new(limit=2):
+    for thread in reddit.get_subreddit('churning').new(limit=2):
         reply = credit_card_link(thread.title)
         if reply !=0:
             print(thread.title  + thread.id)
